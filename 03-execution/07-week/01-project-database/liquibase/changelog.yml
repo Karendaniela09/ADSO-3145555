@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - include:
+      path: CHANGES/DDL/01_TABLES/001_create_mascota.sql
+
+  - include:
+      path: CHANGES/DDL/01_TABLES/002_create_veterinario.sql
+
+  - include:
+      path: CHANGES/DDL/01_TABLES/003_create_cita.sql
+
+  - include:
+      path: CHANGES/DML/00_INSERTS/001_insert_data.sql
