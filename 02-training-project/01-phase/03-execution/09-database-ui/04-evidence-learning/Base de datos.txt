@@ -1,0 +1,148 @@
+CREATE DATABASE SmartHomeDB;
+USE SmartHomeDB;
+
+
+CREATE TABLE Rol (
+    idRol INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    permisos TEXT
+);
+
+
+CREATE TABLE Usuario (
+    idUsuario INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) UNIQUE NOT NULL,
+    documento VARCHAR(20),
+    activo BOOLEAN DEFAULT TRUE,
+    intentosFallidos INT DEFAULT 0,
+    idRol INT,
+    FOREIGN KEY (idRol) REFERENCES Rol(idRol)
+);
+
+
+CREATE TABLE ConfiguracionUsuario (
+    idConfig INT AUTO_INCREMENT PRIMARY KEY,
+    idioma VARCHAR(20),
+    tema VARCHAR(20),
+    notificacionesActivas BOOLEAN,
+    idUsuario INT UNIQUE,
+    FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+);
+
+CREATE TABLE MFA (
+    idMFA INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(50),
+    codigo VARCHAR(20),
+    idUsuario INT,
+    FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+);
+
+
+CREATE TABLE Sesion (
+    idToken VARCHAR(255) PRIMARY KEY,
+    expiracion DATETIME,
+    recordarSesion BOOLEAN,
+    idUsuario INT,
+    FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+);
+
+CREATE TABLE Hogar (
+    idHogar INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    estrato INT,
+    tarifaKwh DOUBLE,
+    activo BOOLEAN,
+    idUsuario INT,
+    FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+);
+
+CREATE TABLE Zona (
+    idZona INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    tipo VARCHAR(50),
+    idHogar INT,
+    FOREIGN KEY (idHogar) REFERENCES Hogar(idHogar)
+);
+
+CREATE TABLE Dispositivo (
+    idDispositivo INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100),
+    tipo VARCHAR(50),
+    estado BOOLEAN,
+    consumoActual DOUBLE,
+    idZona INT,
+    FOREIGN KEY (idZona) REFERENCES Zona(idZona)
+);
+
+CREATE TABLE DispositivoInteligente (
+    idDispositivo INT PRIMARY KEY,
+    protocolo VARCHAR(50),
+    ip VARCHAR(50),
+    FOREIGN KEY (idDispositivo) REFERENCES Dispositivo(idDispositivo)
+);
+
+CREATE TABLE DispositivoManual (
+    idDispositivo INT PRIMARY KEY,
+    consumoEstimado DOUBLE,
+    FOREIGN KEY (idDispositivo) REFERENCES Dispositivo(idDispositivo)
+);
+
+CREATE TABLE Consumo (
+    idConsumo INT AUTO_INCREMENT PRIMARY KEY,
+    fecha DATE,
+    valorKwh DOUBLE,
+    costo DOUBLE,
+    idDispositivo INT,
+    FOREIGN KEY (idDispositivo) REFERENCES Dispositivo(idDispositivo)
+);
+
+CREATE TABLE Recomendacion (
+    idRecomendacion INT AUTO_INCREMENT PRIMARY KEY,
+    descripcion TEXT,
+    ahorroEstimado DOUBLE,
+    idHogar INT,
+    FOREIGN KEY (idHogar) REFERENCES Hogar(idHogar)
+);
+
+CREATE TABLE Notificacion (
+    idNotificacion INT AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(50),
+    mensaje TEXT,
+    fecha DATETIME,
+    leida BOOLEAN,
+    idUsuario INT,
+    FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+);
+
+CREATE TABLE NotificacionAlerta (
+    idNotificacion INT PRIMARY KEY,
+    umbral DOUBLE,
+    FOREIGN KEY (idNotificacion) REFERENCES Notificacion(idNotificacion)
+);
+
+CREATE TABLE NotificacionRecordatorio (
+    idNotificacion INT PRIMARY KEY,
+    fechaRecordatorio DATE,
+    FOREIGN KEY (idNotificacion) REFERENCES Notificacion(idNotificacion)
+);
+CREATE TABLE Sincronizacion (
+    idSync INT AUTO_INCREMENT PRIMARY KEY,
+    fecha DATE,
+    modoOffline BOOLEAN
+);
+
+CREATE TABLE Backup (
+    idBackup INT AUTO_INCREMENT PRIMARY KEY,
+    fecha DATE,
+    idSync INT,
+    FOREIGN KEY (idSync) REFERENCES Sincronizacion(idSync)
+);
+
+CREATE TABLE Auditoria (
+    idLog INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(100),
+    accion VARCHAR(100),
+    fecha DATETIME,
+    modulo VARCHAR(50)
+);

@@ -1,0 +1,10 @@
+Cambio desde HU-01-dev 
+Cambio en dev 
+HEAD
+Cambio diferente en dev 
+ HEAD
+Cambio en qa
+ dev
+Cambio diferente en dev
+Nuevo cambio HU-02
+dev

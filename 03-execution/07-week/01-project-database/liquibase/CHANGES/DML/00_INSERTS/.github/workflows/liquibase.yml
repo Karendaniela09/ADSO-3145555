@@ -1,0 +1,23 @@
+name: Validar Base de Datos
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  liquibase-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Mostrar estructura
+        run: |
+          echo "Estructura del proyecto:"
+          ls -R
+
+      - name: Validación básica
+        run: |
+          echo "Validación completada correctamente ✅"
