@@ -14,8 +14,8 @@ Final delivery of the training project / Entrega final del proyecto formativo.
 | Process / Proceso | Completion of the technologist taught stage / Finalización de la etapa lectiva del tecnólogo |
 | Research seedbed / Semillero de investigación | Developers & Geeks |
 | Delivery version / Versión entregada | `final-delivery-2026` |
-| Delivery date / Fecha de entrega | |
-| Delivered by / Entregado por | |
+| Delivery date / Fecha de entrega | 2026-11-05 |
+| Delivered by / Entregado por | KAREN DANIELA HOLGUIN CRUZ |
 
 ## Summary / Resumen
 
@@ -42,6 +42,7 @@ Final delivery of the training project / Entrega final del proyecto formativo.
 - *Production URL / URL en producción:* Pendiente de confirmar.
 
 - *Demo credentials / Credenciales de prueba:* Pendiente de confirmar. No publicar contraseñas reales.
+
 ## Team members / Integrantes
 
 > Names and document numbers were preloaded by the instructor from the Sofía Plus report. Each member checks their row, completes GitHub user and role, and marks the last column. Report any error, missing member or extra member to the instructor.
@@ -50,31 +51,43 @@ Final delivery of the training project / Entrega final del proyecto formativo.
 
 | Full name / Nombre completo | Doc. type / Tipo | Doc. number / Número | Ficha | GitHub user / Usuario | Role / Rol | Verified and authorized / Verificado y autorizado |
 |---|---|---|---|---|---|---|
-| KAREN DANIELA HOLGUIN CRUZ | CC | 1079176743 | 3145555 | Karendaniela09 | | ☐ |
-| NATALIA CHALA CHALA | CC | 1075508373 | 3145555 | nataliachala1 | | ☐ |
-| KEVIN STIVEN LOPEZ AMAYA | CC | 1077724241 | 3145555 |  | | ☐ |
+| KAREN DANIELA HOLGUIN CRUZ | CC | 1079176743 | 3145555 | Karendaniela09 | Responsable documental y entrega | ☑ |
+| NATALIA CHALA CHALA | CC | 1075508373 | 3145555 | nataliachala1 | Apoyo en documentación y pruebas | ☐ |
+| KEVIN STIVEN LOPEZ AMAYA | CC | 1077724241 | 3145555 | | Responsable técnico | ☐ |
 
 Data use authorization: by checking the box, the member confirms their data and authorizes publishing their name, document number and ficha in this public repository, for the software registration process (Ley 1581 de 2012). Anyone who does not authorize it tells the instructor before delivering.
 
 Autorización de datos: al marcar la casilla, el integrante confirma sus datos y autoriza publicar su nombre, número de documento y ficha en este repositorio público, para el trámite de registro de software (Ley 1581 de 2012). Quien no lo autorice se lo informa al instructor antes de entregar.
 
+## External resources / Recursos externos
+
+| Resource / Recurso | Link / Enlace |
+|---|---|
+| General delivery folder / Carpeta general de entrega | [Google Drive](https://drive.google.com/drive/folders/1XixiaSgSRYYQ-v05Cc7eiCjQqPzcn5i1?usp=drive_link) |
+| Software Requirements Specification (SRS) / Especificación de requisitos | [View SRS](https://docs.google.com/document/d/1rCfq6Ln9uWrfAAnkTxMHXBi5w6Ev9Wa2/edit?usp=drive_link&ouid=107602779043193673720&rtpof=true&sd=true) |
+| Technical proposal / Propuesta técnica | [Google Drive](https://drive.google.com/drive/folders/1J5mP7fOAst30__XneG539jbFLqvlANIj?usp=drive_link) |
+| Technical manuals / Manuales técnicos | [Google Drive](https://drive.google.com/drive/folders/1o4dKGlXw5mmoxrnbB96tUOx9hL5JgPZq?usp=drive_link) |
+| Project article / Artículo del proyecto | [Google Drive](https://drive.google.com/drive/folders/1f63Xoeh0AVkygLEEoQ_-h73g0Se5CfqY?usp=drive_link) |
+| Mobile application demonstration / Demostración de aplicación móvil | [Watch video](https://youtu.be/hsYw_LOl5yY) |
+| Web application demonstration / Demostración de aplicación web | [Watch video](https://youtu.be/ZkaN_58ZnD8) |
+
 ## Delivery contents / Contenido de la entrega
 
 | Folder / Carpeta | Content / Contenido | Done / Listo |
 |---|---|---|
-| [`01-requirements-specification/`](01-requirements-specification/) | Requirements specification / Especificación de requisitos | ☐ |
+| [`01-requirements-specification/`](01-requirements-specification/) | Requirements specification / Especificación de requisitos | [x] |
 | [`02-software-analysis/`](02-software-analysis/) | Software analysis / Análisis del software | ☐ |
-| [`03-technical-proposal/`](03-technical-proposal/) | Technical proposal / Propuesta técnica | ☐ |
+| [`03-technical-proposal/`](03-technical-proposal/) | Technical proposal / Propuesta técnica | [x] |
 | [`04-software-design/`](04-software-design/) | Software design / Diseño del software | ☐ |
 | [`05-test-documentation/`](05-test-documentation/) | Test documentation / Documentación de pruebas | ☐ |
 | [`06-implementation-procedure/`](06-implementation-procedure/) | Implementation procedure / Procedimiento de implementación | ☐ |
-| [`07-improvement-actions/`](07-improvement-actions/) | Improvement actions / Acciones de mejoramiento | ☐ |
-| [`08-manuals/`](08-manuals/) | Manuals / Manuales | ☐ |
-| [`09-project-article/`](09-project-article/) | Project article / Artículo del proyecto | ☐ |
-| [`10-videos/`](10-videos/) | Videos / Videos | ☐ |
+| [`07-improvement-actions/`](07-improvement-actions/) | Improvement actions / Acciones de mejoramiento | [x] |
+| [`08-manuals/`](08-manuals/) | Manuals / Manuales | [x] |
+| [`09-project-article/`](09-project-article/) | Project article / Artículo del proyecto | [x] |
+| [`10-videos/`](10-videos/) | Videos / Videos | [x] |
 | [`code-tag/`](code-tag/) | Repository links, tags and ZIP files / Enlaces, tags y ZIP | ☐ |
-| [`team-roster.md`](team-roster.md) | Team and roles / Equipo y roles | ☐ |
-| [`software-registration.md`](software-registration.md) | Software registration data / Datos para registro de software | ☐ |
+| [`team-roster.md`](team-roster.md) | Team and roles / Equipo y roles | [x] |
+| [`software-registration.md`](software-registration.md) | Software registration data / Datos para registro de software | [x] |
 
 ## Large files on Google Drive / Archivos pesados en Google Drive
 
@@ -84,4 +97,5 @@ Aquí solo van archivos demasiado pesados para GitHub, como videos de demostraci
 
 | File / Archivo | Size / Tamaño | Link / Enlace |
 |---|---|---|
-| | | |
+| Pitch publicitario (1-2 min) | N/A (Google Drive) | https://drive.google.com/drive/folders/1w80-0sPsaINYuTmaFonhoBQMnGnVYAPu?usp=drive_link |
+| Tutorial funcional (3-5 min) | N/A (Google Drive) | https://drive.google.com/drive/folders/1yuz0u9QzcAll0bu43cl2pAvFlFfM8tcv?usp=drive_link |
